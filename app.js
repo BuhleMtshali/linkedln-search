@@ -39,6 +39,10 @@ function renderFeed(response) {
   const subTitle = feedResults.article.subtitle;
   const textUrl = feedResults.postUrl;
   const textArticle = feedResults.text;
+  const comments = feedResults.commentCount;
+  const empathyCount = feedResults.empathyCount;
+  const likeCount = feedResults.likeCount;
+  const reposts = feedResults.repostsCount;
   html = `
             <div class="profle-container">
             <div class="img">
@@ -54,7 +58,12 @@ function renderFeed(response) {
             <a href="${textUrl}" target="_black">${subTitle}</a>
             <p>${textArticle}</p>
             </div>
-            <div class="reactions"></div>
+            <div class="reactions">
+            <p class="comments"><i class="fa-solid fa-comment"></i> ${comments}</p>
+            <p class="emphathy"><i class="fa-solid fa-heart"><i/> ${empathyCount}</p>
+            <p class="likes"><i class="fa-regular fa-thumbs-up"></i> ${likeCount}</p>
+            <p class="reposts"><i class="fa-solid fa-share"></i> ${reposts}</p>
+            </div>
         `;
   feedContainerElement.innerHTML = html;
 }
