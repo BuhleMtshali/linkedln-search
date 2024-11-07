@@ -61,3 +61,17 @@ header {
   font-weight: 500;
   cursor: grab;
 }
+.profle-container {
+  display: flex;
+  align-items: center;
+}
+.img img {
+  width: 60px;
+  height: 60px;
+  padding-right: 5px;
+  border-radius: 50%;
+}
+.user h1,
+h3 {
+  margin: 0;
+}

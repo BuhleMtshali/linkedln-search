@@ -37,9 +37,13 @@ function renderFeed(response) {
   const profilePic = feedResults.author.profilePictures[1].url;
   html = `
             <div class="profle-container">
+            <div class="img">
             <img src="${profilePic}"/>
+            </div>
+            <div class="user">
             <h1>${userName} ${lastName}</h1>
-            <h2>${headLine}</h2>
+            <h3>${headLine}</h3>
+            </div>
             </div>
         `;
   feedContainerElement.innerHTML = html;
