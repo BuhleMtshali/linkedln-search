@@ -1,4 +1,4 @@
-let feedContainerElement = document.querySelector("feed-container");
+let feedContainerElement = document.querySelector(".feed-container");
 
 // Function for refreshing the feed page
 document.getElementById("logo-container").addEventListener("click", () => {
@@ -27,5 +27,20 @@ function getFeed(url) {
 
 // Function for rendering feed
 function renderFeed(response) {
-  console.log(response.data);
+  let html = "";
+  let feedResults = response.data.data;
+
+  console.log(feedResults);
+  const userName = feedResults.author.firstName;
+  const lastName = feedResults.author.lastName;
+  const headLine = feedResults.author.headline;
+  const profilePic = feedResults.author.profilePictures[1].url;
+  html = `
+            <div class="profle-container">
+            <img src="${profilePic}"/>
+            <h1>${userName} ${lastName}</h1>
+            <h2>${headLine}</h2>
+            </div>
+        `;
+  feedContainerElement.innerHTML = html;
 }
