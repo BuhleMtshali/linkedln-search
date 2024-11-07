@@ -9,3 +9,15 @@ body {
   box-sizing: border-box;
   font-family: "Inter Tight", sans-serif;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo i {
+  font-size: 30px;
+  padding: 6px;
+  color: var(--red-text);
+}
+.logo h2 {
+  color: var(--dark-black-color);
+}
