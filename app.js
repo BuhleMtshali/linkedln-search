@@ -35,6 +35,10 @@ function renderFeed(response) {
   const lastName = feedResults.author.lastName;
   const headLine = feedResults.author.headline;
   const profilePic = feedResults.author.profilePictures[1].url;
+  const postTitle = feedResults.article.title;
+  const subTitle = feedResults.article.subtitle;
+  const textUrl = feedResults.postUrl;
+  const textArticle = feedResults.text;
   html = `
             <div class="profle-container">
             <div class="img">
@@ -45,6 +49,12 @@ function renderFeed(response) {
             <h3>${headLine}</h3>
             </div>
             </div>
+            <div class="post-container">
+            <h2>${postTitle}</h2>
+            <a href="${textUrl}" target="_black">${subTitle}</a>
+            <p>${textArticle}</p>
+            </div>
+            <div class="reactions"></div>
         `;
   feedContainerElement.innerHTML = html;
 }

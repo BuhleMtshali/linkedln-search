@@ -102,3 +102,10 @@ h3 {
 .user i {
   color: var(--red-text);
 }
+.post-container h2 {
+  margin-bottom: 0;
+}
+.post-container a {
+  color: var(--red-text);
+  text-decoration: none;
+}
