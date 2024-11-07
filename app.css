@@ -4,7 +4,9 @@
   --red-text: #d90429;
   --grey-text: #8d99ae;
 }
-
+*:focus {
+  outline: none;
+}
 body {
   box-sizing: border-box;
   font-family: "Inter Tight", sans-serif;
@@ -13,7 +15,7 @@ body {
 .container {
   width: 650px;
   max-width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   margin: 0 auto;
   background-color: var(--bg-background);
   position: relative;
@@ -38,4 +40,23 @@ header {
 }
 .right-side input {
   padding: 9px 18px;
+}
+#search-input {
+  border: none;
+  cursor: pointer;
+}
+#search-input:focus {
+  outline: 2px solid var(--red-text);
+}
+::placeholder {
+  color: var(--dark-black-color);
+  font-size: 15px;
+}
+#submit-btn {
+  border: none;
+  font-size: 15px;
+  background-color: var(--red-text);
+  color: var(--bg-background);
+  font-weight: 500;
+  cursor: grab;
 }
