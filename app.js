@@ -33,13 +33,14 @@ function renderFeed(response) {
   console.log(feedResults);
   const userName = feedResults.author.firstName;
   const lastName = feedResults.author.lastName;
+  const userProfile = feedResults.author.username;
   const headLine = feedResults.author.headline;
   const profilePic = feedResults.author.profilePictures[1].url;
   const postTitle = feedResults.article.title;
   const subTitle = feedResults.article.subtitle;
   const textUrl = feedResults.postUrl;
   const textArticle = feedResults.text;
-  const comments = feedResults.commentCount;
+  const comments = feedResults.commentsCount;
   const empathyCount = feedResults.empathyCount;
   const likeCount = feedResults.likeCount;
   const reposts = feedResults.repostsCount;
@@ -51,6 +52,7 @@ function renderFeed(response) {
             <div class="user">
             <h1>${userName} ${lastName} <i class="fa-solid fa-briefcase"></i></h1>
             <h3>${headLine}</h3>
+            <small><i class="fa-solid fa-link"></i> ${userProfile}</small>
             </div>
             </div>
             <div class="post-container">
@@ -60,7 +62,7 @@ function renderFeed(response) {
             </div>
             <div class="reactions">
             <p class="comments"><i class="fa-solid fa-comment"></i> ${comments}</p>
-            <p class="emphathy"><i class="fa-solid fa-heart"><i/> ${empathyCount}</p>
+            <p class="emphathy"><i class="fa-solid fa-heart"></i> ${empathyCount}</p>
             <p class="likes"><i class="fa-regular fa-thumbs-up"></i> ${likeCount}</p>
             <p class="reposts"><i class="fa-solid fa-share"></i> ${reposts}</p>
             </div>

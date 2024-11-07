@@ -13,7 +13,7 @@ body {
   background-color: #f7f7f8;
 }
 .container {
-  width: 650px;
+  width: 500px;
   max-width: 100%;
   padding: 10px 20px;
   margin: 0 auto;
@@ -99,6 +99,9 @@ h3 {
   color: var(--grey-text);
   font-size: 16px;
 }
+.user small {
+  font-style: italic;
+}
 .user i {
   color: var(--red-text);
 }
@@ -108,4 +111,22 @@ h3 {
 .post-container a {
   color: var(--red-text);
   text-decoration: none;
+}
+.reactions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reactions i {
+  color: var(--red-text);
+  font-size: 25px;
+}
+.reactions p {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.reactions p:hover {
+  color: var(--dark-black-color);
+  transform: scale(1.5);
 }
