@@ -1,0 +1,11 @@
+:root {
+  --bg-background: #ffffff;
+  --dark-black-color: #2b2d42;
+  --red-text: #d90429;
+  --grey-text: #8d99ae;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
