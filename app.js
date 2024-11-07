@@ -41,7 +41,7 @@ function renderFeed(response) {
             <img src="${profilePic}"/>
             </div>
             <div class="user">
-            <h1>${userName} ${lastName}</h1>
+            <h1>${userName} ${lastName} <i class="fa-solid fa-briefcase"></i></h1>
             <h3>${headLine}</h3>
             </div>
             </div>
