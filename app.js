@@ -58,7 +58,7 @@ function renderFeed(response) {
             <div class="post-container">
             <h2>${postTitle}</h2>
             <a href="${textUrl}" target="_black">${subTitle}</a>
-            <p>${textArticle}</p>
+            <p class="text">${textArticle}</p>
             </div>
             <div class="reactions">
             <p class="comments"><i class="fa-solid fa-comment"></i> ${comments}</p>

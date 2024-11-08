@@ -130,3 +130,6 @@ h3 {
   color: var(--dark-black-color);
   transform: scale(1.5);
 }
+.text {
+  font-size: 16px;
+}
